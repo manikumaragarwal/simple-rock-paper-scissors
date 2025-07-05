@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaos Truth and Dare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="game-container">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">🎲</div>
+        <h1>CHAOS Truth & Dare</h1>
+      </div>
+    </header>
+
+    <!-- Setup Screen -->
+    <div id="setup-screen" class="screen">
+      <h2>Game Setup</h2>
+
+      <div class="input-group">
+        <label for="player-count">Number of Players</label>
+        <select id="player-count">
+          <option value="2">2 Players</option>
+          <option value="3" selected>3 Players</option>
+          <option value="4">4 Players</option>
+          <option value="5">5 Players</option>
+          <option value="6">6 Players</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Player Names</label>
+        <div id="player-inputs" class="players-container">
+          <!-- Player inputs generated here -->
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="rounds">Number of Rounds</label>
+        <input type="number" id="rounds" min="1" max="20" value="5">
+      </div>
+
+      <div class="prompts-container">
+        <div class="prompt-section">
+          <h3>Truth Prompts</h3>
+          <div class="input-group">
+            <input type="text" id="truth-input" placeholder="Enter a truth question">
+            <button id="add-truth">Add Truth</button>
+          </div>
+          <ul id="truth-list" class="prompt-list"></ul>
+        </div>
+
+        <div class="prompt-section">
+          <h3>Dare Prompts</h3>
+          <div class="input-group">
+            <input type="text" id="dare-input" placeholder="Enter a dare challenge">
+            <button id="add-dare">Add Dare</button>
+          </div>
+          <ul id="dare-list" class="prompt-list"></ul>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button id="start-game" class="btn-success">Start Game</button>
+      </div>
+    </div>
+
+    <!-- Guessing Screen -->
+    <div id="guessing-screen" class="screen hidden">
+      <h2>Round <span id="current-round">1</span></h2>
+      <p>Guess a number between <span id="min-value">0</span> and <span id="max-value">100</span></p>
+
+      <div class="players-container" id="guessing-players">
+        <!-- Players with their status will appear here -->
+      </div>
+
+      <div class="guess-input-container">
+        <input type="number" id="guess-input" class="guess-input" min="0" max="100" placeholder="0-100">
+        <button id="submit-guess">Submit Guess</button>
+      </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen hidden">
+      <h2>Round Results</h2>
+
+      <div class="target-container">
+        <p>The target number was:</p>
+        <div class="target-value" id="target-value">??</div>
+      </div>
+
+      <div class="players-container" id="results-players">
+        <!-- Players with their guesses and status will appear here -->
+      </div>
+
+      <div class="action-buttons">
+        <button id="show-punishment">Continue</button>
+      </div>
+    </div>
+
+    <!-- Punishment Screen -->
+    <div id="punishment-screen" class="screen hidden">
+      <h2>Punishment Time!</h2>
+
+      <div class="punishment-card">
+        <div class="punishment-type" id="punishment-type">DARE</div>
+        <div class="punishment-text" id="punishment-text">Do 10 pushups while singing your national anthem</div>
+        <div class="punishment-player" id="punishment-player">Player Name</div>
+
+        <div class="strikes-container">
+          <div class="strike"></div>
+          <div class="strike"></div>
+          <div class="strike"></div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button id="next-round">Next Round</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fireworks" id="fireworks"></div>
+  <div id="notification" class="notification">Player joined the game!</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
