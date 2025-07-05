@@ -370,4 +370,7 @@ The game works on all device sizes with these features:
    - Add audio elements for key events
    - Play sounds on guess submission, results, etc.
 
-This comprehensive guide should help you understand every aspect of the Chaos Truth & Dare game. The code is organized to be readable and modifiable, with clear separation between HTML structure, CSS styling, and JavaScript logic.
+
+
+
+For any confusion visit me at manishpshyco1969@gmail.com     lol!
