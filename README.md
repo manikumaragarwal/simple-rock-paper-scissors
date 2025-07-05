@@ -4,4 +4,4 @@ This is a very simple rock paper scissor game I made without any libraries. It's
 
 to get a deep-dive of this project.. read the documentation. (took me days to write that shit)
 
-please star this repo :P
+### please star this repo :P
