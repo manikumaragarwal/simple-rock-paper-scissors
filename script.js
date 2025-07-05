@@ -10,14 +10,14 @@ const gameState = {
   guesses: {},
   prompts: {
     truth: [
-      "What's your most embarrassing moment?",
-      "Have you ever cheated on a test?",
-      "What's your biggest fear?"
+      "what's the longest you went without taking a shower.",
+      "What are your scared of regarding your future.",
+      "Who was the worst person in JNV?"
     ],
     dare: [
-      "Do 10 pushups right now",
-      "Sing a song loudly",
-      "Dance for 30 seconds"
+      "Call a random JNV friend who you're not in contact with anymore.",
+      "Cook something for your family.. but put extra salt in it.",
+      "Watch a Horror movie at your roof-top alone at night."
     ]
   },
   strikes: {},
@@ -381,7 +381,8 @@ function endGame() {
             </div>
         </div>
     `;
-
+// I know, I should have made this a little more secure, but IDGAF. nobody's going to use this shit!
+  
   // Create confetti effect
   createConfetti();
 }
